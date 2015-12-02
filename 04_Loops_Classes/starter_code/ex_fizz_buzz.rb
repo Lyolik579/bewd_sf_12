@@ -6,9 +6,27 @@ end
 # Write a program that prints the numbers from 1 to 100. 
 # But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. 
 # For numbers which are multiples of both three and five print “FizzBuzz”.
-#
-# Your code here
 
+def fizzbuzz (n)
+    if  n % 3 == 0 && n % 5 == 0
+        "fizzbuzz" 
+    elsif n % 5 == 0
+        "buzz"
+    elsif n % 3 ==  0
+        "fizz"
+    else 
+        n
+end
+
+def fizzbuzz (n)
+    result = ""
+    if  n % 3 == 0
+        result += "fizz" 
+    elsif n % 5 == 0
+        result += "buzz"
+    else 
+        n
+end
 
 # Tests
 assert_equal fizzbuzz(1), 1
