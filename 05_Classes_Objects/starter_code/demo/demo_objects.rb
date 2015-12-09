@@ -3,6 +3,7 @@
  
 #Jimmy Mazin, math major, grade F
 #Pepe Hogue, music major, grade B
+<<<<<<< HEAD
 #jimmy = {name: "Jimmy Mazin", major: "Math", grade: "F"}
 #pepe = {name: "Pepe Hogue", major: "Music", grade: "B"}
 
@@ -10,8 +11,28 @@
 #eggs, brand "Golden Fields", price, grade A
 #eggs = {brand: "Golden Fields", price: "4.99", grade: "A"}
 
+=======
+# jimmy = {name: "Jimmy Mazin", major: "Math", grade: "F"}
+# pepe = {name: "Pepe Hogue", major: "Music", grade: "B"}
 
-#grade_status: A method that is supposed to decide which students fail and which pass a class
+# #And a totally unrelated hash about eggs
+# #eggs, brand "Golden Fields", price, grade A
+eggs = {brand: "Golden Fields", num: 12, price: 3, grade: "A"}
+
+# #grade_status: A method that is supposed to decide which students fail and which pass a class
+# def grade_status(student)
+# 	if student[:grade] == "F"
+# 		"failed"
+# 	else
+# 		"passed"
+# 	end
+# end
+>>>>>>> d4d0371fc1b632c18c9608947c605083f5b631bb
+
+# puts "Jimmy's status: #{grade_status(jimmy)}"
+# puts "Pepe's status: #{grade_status(pepe)}"
+
+# puts "Hahah, egg's status: #{grade_status(eggs)}"
 
 #Let's see what happens when we call this function on our hashes:
 
@@ -23,6 +44,7 @@
 #CLASSES!
 
 #Student class 
+<<<<<<< HEAD
 #class Student 
 #    attr_accessor :name, :major, :grade 
 #end 
@@ -49,6 +71,31 @@
 
 
 
+=======
+# class Student 
+# 	attr_accessor :name, :major, :grade
+
+# 	def grade_status()
+# 		if @grade == "F"
+# 			"failed"
+# 		else
+# 			"passed"
+# 		end
+# 	end
+
+# end
+
+# jimmy = Student.new()
+# jimmy.name= "Jimmy"
+# jimmy.major = "Math"
+# jimmy.grade = "F"
+
+# puts "Jimmy's status: #{jimmy.grade_status()}"
+
+# puts "eggs class: #{eggs.class}"
+# puts "Egg's status: #{eggs.grade_status()}"
+ 
+>>>>>>> d4d0371fc1b632c18c9608947c605083f5b631bb
 
 #add attr_accessor
 
@@ -65,6 +112,27 @@
 #####################################################################################################
 #####################################################################################################
 #Add initialize method to Student class
+class Student 
+	attr_accessor :name, :major, :grade
+
+	def initialize (name, major)
+		@name = name
+		@major = major
+		@grade = ""
+	end
+
+	def grade_status()
+		if @grade == "F"
+			"failed"
+		else
+			"passed"
+		end
+	end
+
+end
+
+jimmy = Student.new("Jimmy", "math")
+
 
 class Student 
     attr_accessor :name, :major, :grade 
