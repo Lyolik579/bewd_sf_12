@@ -1,9 +1,40 @@
 #Demo about class vs instance variables and methods
-
+require 'pry'
 #instance methods and variables
 class Robot
-	#has a type
-	#can puts it type
+    attr_accessor :type
+    @@hive_mind_activated = false
+    
+    def self.get_hive_mind ()
+        @@hive_mind_activated
+    end 
+    
+    def self.set_hive_mind(bool)
+        @@hive_mind_activated = bool
+    end 
+    
+    def initialize (type)
+    	@type = type
+    end 
+    
+    
+    def my_type ()
+        puts "My type is #{@type}"
+    end 
+    
+    def self.three_laws()
+    puts "No harm"
+    puts "do orders"
+    puts "protect"
+    end
+    
+    def attack ()
+        if @@hive_mind_activated
+            puts "destroy"
+    else 
+        puts "We're peaceful"
+    end 
+    end 
 end
 
 #Now add a class method, using Robot
